@@ -1,0 +1,140 @@
+:root{
+    --primary-color:rgb(228, 6, 6);
+    --secondary-color:antiquewhite;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+
+body{
+    height: 100vh;
+    background: url('photo/background.jpg') no-repeat center center/cover;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Header */
+.header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 1250px;
+    
+    margin: auto;
+}
+.menu-logo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.6;
+    align-items: center;
+    color: rgb(221, 212, 200);
+}
+
+.menu-logo i {
+    color:var(--primary-color);
+}
+
+.menu-logo nav a{
+    text-decoration: none;
+    margin-right: 2rem;
+    color: var(--secondary-color);
+}
+
+.menu-logo nav a:hover{
+    color: var(--primary-color);
+}
+/* Main */
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h2{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.container h3{
+    font-size: 3rem;
+    padding: 1rem 0;
+    color: var(--secondary-color);
+}
+/* BTN */
+.btn{
+    overflow: hidden;
+    margin-top: 1rem;
+    position: relative;
+    padding:10px 30px;
+    background:var(--primary-color);
+    border-radius: 6px;
+    font-size: 1.2rem;
+    color:var(--secondary-color);
+    cursor: pointer;
+    transition: background-color .7s ease-in-out;
+    z-index: 1;
+
+
+}
+
+.btn::after{
+    content:'';
+    z-index: -1;
+    position: absolute;
+    width: 140px;
+    height: 46px;
+    top: 0;
+    right: -150%;
+    background-color:var(--secondary-color);
+    transition: 1s ease-out;
+
+}
+.btn::before{
+    content:'';
+    z-index: -1;
+    position: absolute;
+    width: 140px;
+    height: 46px;
+    top: 0;
+    left: -150%;
+    background-color:var(--secondary-color);
+    transition: 1s ease-out;
+
+}
+
+.btn:hover{
+    color: var(--primary-color);
+}
+.btn:hover::after{
+    transform: translate(-100%);
+}
+.btn:hover::before{
+    transform: translate(100%); 
+}
+
+
+.hidden{
+    display: none;
+}
+
+/* From */
+
+.container form{
+    display: flex;
+    color: var(--secondary-color); 
+    flex-direction: column;
+}
+
+.container form input, textarea{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 4px;
+    border-radius: 2px;
+}
