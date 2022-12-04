@@ -16,6 +16,10 @@ body{
     font-family: 'Press Start 2P', cursive;
 }
 
+h1,h2,h3,h4,p{
+    color: var(--secondary-color);
+}
+
 /* Header */
 .header{
     display: flex;
@@ -59,13 +63,11 @@ body{
 .container h2{
     font-size: 2rem;
     padding-bottom: 1rem;
-    color: var(--secondary-color);
 }
 
 .container h3{
     font-size: 3rem;
     padding: 1rem 0;
-    color: var(--secondary-color);
 }
 /* BTN */
 .btn{
@@ -138,3 +140,9 @@ body{
     padding: 4px;
     border-radius: 2px;
 }
+
+.grid{
+display: flex;
+background-color: #333;
+}
+
