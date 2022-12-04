@@ -140,9 +140,45 @@ h1,h2,h3,h4,p{
     padding: 4px;
     border-radius: 2px;
 }
-
 .grid{
-display: flex;
-background-color: #333;
+    width: 1400px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
 }
 
+.slide{
+    background-color: #333;
+    width: 50%;
+    display: flex;
+    border-radius: 6px;
+    margin: 2px;
+}
+
+.photo{
+width: 50%;
+border-radius: 6px;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.info{
+width: 50%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-left: 0.5rem;
+}
+
+.info h4{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.info p{
+    font-size: 0.8rem;
+}
