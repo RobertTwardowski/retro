@@ -127,10 +127,10 @@ h1,h2,h3,h4,p{
     color: var(--primary-color);
 }
 .btn:hover::after{
-    transform: translate(-100%);
+    transform: translate(-150%);
 }
 .btn:hover::before{
-    transform: translate(100%); 
+    transform: translate(150%); 
 }
 
 
