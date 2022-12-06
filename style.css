@@ -216,15 +216,22 @@ margin-left: 0.5rem;
     animation: one 2s;
     animation-direction: 1s;
 }
+.two{
+    transform: rotateY(0);
+    animation: one 2s;
+    animation-direction: 1s;
+}
 @keyframes one {
     0% {
       transform: rotateX(0);
+      opacity: 0;
     }
     50% {
       transform: rotateX(50deg);
     }
     100%{
         transform: rotateX(0);
+        opacity: 1;
     }
   }
   .show-one{
@@ -250,20 +257,27 @@ margin-left: 0.5rem;
     }
     .hidden-three{
         transform: translateY(-1000px);
-        animation:showTwo var(--animate-speed) forwards ease-in;
+        animation:two var(--animate-speed) forwards ease-in;
     }
     @keyframes show{
         to{
             transform: translateX(0);
-        }
-    
     }
-    @keyframes showTwo{
-        to{
-            transform: translateY(0);
-        }
-    
+}
+@keyframes two {
+    0% {
+      transform: rotateY(-1000px);
+      opacity: 0;
     }
+    50% {
+      transform: rotateY(50deg);
+    }
+    100%{
+        transform: rotateY(0);
+        opacity: 1;
+    }
+}
+
 /* mobile */
 @media(max-width: 768px){
 body{
